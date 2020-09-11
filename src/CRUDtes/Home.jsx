@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Axios from 'axios'
-import AddEditUser from './Modal/AddEditUser'
+import AddEditUser from './Modal/Register'
 
 class Home extends Component {
   constructor(props) {
@@ -94,7 +94,7 @@ class Home extends Component {
   render() {
     return (
       <Fragment>
-        <h2 className="text-center">Latihan Crud (Axios)</h2>
+        <h2 className="text-center">Daftar Siswa</h2>
         {/* modal */}
         <button type="button" className="btn btn-primary ml-5" data-toggle="modal" data-target="#exampleModal">
           Create
@@ -123,29 +123,29 @@ class Home extends Component {
         <div className="row d-flex justify-content-center">
           <div className="col-11 mt-3">
           <table className="table table-bordered text-center">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Username</th>
-              <th>Email</th>
-              <th>Name</th>
-              <th>Gender</th>
-              <th>Registered</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.data.map((data, index) => 
-              <tr key={data.id}>
-                <td>{index +1}</td>
-                <td>{data.username}</td>
-                <td>{data.email}</td>
-                <td>{data.name}</td>
-                <td>{data.jenis_kelamin}</td>
-                <td>{data.stored_at}</td>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Registered</th>
               </tr>
-            )}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {this.state.data.map((data, index) => 
+                <tr key={data.id}>
+                  <td>{index +1}</td>
+                  <td>{data.username}</td>
+                  <td>{data.email}</td>
+                  <td>{data.name}</td>
+                  <td>{data.jenis_kelamin}</td>
+                  <td>{data.stored_at}</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
           </div>
         </div>
         <div className="d-flex justify-content-end">

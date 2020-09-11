@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-class AddEditUser extends Component {
+class Register extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -15,8 +15,8 @@ class AddEditUser extends Component {
   render() {
     return (
       <Fragment>
-        <div className="modal-header">
-          <h5 className="modal-title text-bold" id="exampleModalLabel">Add New User</h5>
+        <div className="modal-header text_center">
+          <h5 className="modal-title text-bold text-center" id="exampleModalLabel">Add New User</h5>
           <button type="button" className="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -28,40 +28,45 @@ class AddEditUser extends Component {
             </div>
             <div className="form-row">
               <input type="text" className="form-control" type="text" name="username" id="username" />
-            </div><br/>
+            </div>
+            <br/>
             <div className="col-9">
               <label htmlFor="">Name</label>
             </div>
             <div className="form-row">
               <input type="text" className="form-control" type="text" name="name" id="name" />
-            </div><br/>
+            </div>
+            <br/>
             <div className="col-9">
               <label htmlFor="">Email</label>
             </div>
             <div className="form-row">
               <input type="text" className="form-control" type="text" name="email" id="email" />
-            </div><br/>
+            </div>
+            <br/>
             <div className="col-9">
               <label htmlFor="">Gender</label>
             </div>
             <div className="form-check">
-              <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+              <input className="form-check-input" type="radio" value="male" />
               <label className="form-check-label" for="flexRadioDefault1">
                 Male
               </label>
             </div>
             <div className="form-check">
-              <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+              <input className="form-check-input" type="radio" value="female" />
               <label className="form-check-label" for="flexRadioDefault2">
                 Female
               </label>
-            </div><br/>
+            </div>
+            <br/>
             <div className="col-9">
               <label htmlFor="">Password</label>
             </div>
             <div className="form-row">
               <input type="text" className="form-control" type="text" name="password" id="password" />
-            </div><br/>
+            </div>
+            <br/>
             <div className="col-9">
               <label htmlFor="">Confirm Password</label>
             </div>
@@ -78,4 +83,4 @@ class AddEditUser extends Component {
   }
 }
 
-export default AddEditUser
+export default Register
