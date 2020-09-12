@@ -460,7 +460,7 @@ class Home extends Component{
     })
   }    
 
-  updateTable =() => {
+  updateTable = () => {
     this.componentDidMount()
   }
 
@@ -490,16 +490,21 @@ class Home extends Component{
           <h2 className="text-center font-weight-bold mb-3">Latihan CRUD</h2>
           <div className="row">
             {/* Add User */}
-            <div className="justify-content-start">
-              <div className="col-3">
+            <div className="row">
+              <div className="col-4">
                 <button onClick={()=> {
                   this.setState({ formName : 'Form Registrasi', status : 'Add', userId : ''}) }} type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                   <i className="fas fa-plus-circle"></i>&nbsp; Create new user
                 </button>
               </div>
+              <div className="row mt-2">
+                <div className="col-4">
+                  <button onClick={this.updateTable} className="btn btn-success">Refresh Page</button>
+                </div>
+              </div>
             </div>
             {/* seacrh */}
-            <div className=" col justify-content-center">
+            <div className="row justify-content-center">
               <div className="col-4">
                 <label htmlFor="cari"> Cari</label>
                 <br/>
@@ -508,7 +513,7 @@ class Home extends Component{
                 {/* </form> */}
               </div>
             </div>
-            <div className="col justify-content-end">
+            <div className="row justify-content-end">
               <div className="col-2">
                 <select onChange={this.onSelectItem} className="form-select">
                   <option className="option" value="5">5</option>
