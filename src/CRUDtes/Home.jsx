@@ -56,7 +56,7 @@ class Home extends Component{
     this.componentDidMount()
   }
 
-  // onInput = (event) => {
+   // onInput = (event) => {
   //   event.preventDefault()
   //   this.setState({
   //     cari : event.target.value
